@@ -1,20 +1,15 @@
 import React from "react";
 
-function LoginForm({ isLoggedIn, setIsLoggedIn }) {
+function LoginForm({ setIsLoggedIn }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoggedIn(true); 
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <input type="text" placeholder="Username" required />
-      </div>
-      <div>
-        <input type="password" placeholder="Password" required />
-      </div>
-
+    <form style={{display:"flex" , gap:"10px"}} onSubmit={handleSubmit}>
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
       <button type="submit">Login</button>
     </form>
   );
